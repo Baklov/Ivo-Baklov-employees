@@ -19,7 +19,6 @@ public class Launcher {
 		try {
 			// Read all colleagues from File
 			String fileEmployeesName =giveMeFileName();
-			//"E:\\ivo\\coleguesbyprojects1.txt"
 			List<ColleaguesByProjects> AllCollegues =f.readCSVFile(fileEmployeesName);
 			 //Couple colleagues who have worked together on common projects for the longest time
 		    List<String> result =f.get2ColleaguesWorkedTogetherOnPrjLongestTime(AllCollegues);
