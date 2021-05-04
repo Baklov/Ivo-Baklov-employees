@@ -190,17 +190,17 @@ public class CoupleWorkedTogetherLongestPeriod {
 				      // calculates days a couple has worked together on a project
 				      long days =getDaysCoupleWorkTogetherbyPrj(dateFromFirstCollegue, dateToFirstCollegue, dateFromSecondCollegue, dateToSecondCollegue);
 				      
-//				      if (hashCoupleColleaguesWorkedTogether.containsKey(keyCombine)) {		
-//				    	  long tmpDays= hashCoupleColleaguesWorkedTogether.get(keyCombine);
-//				    	  tmpDays+=days;
-//				    	  //stored accumulated time in days of together work for the couple				     
-//				    	  hashCoupleColleaguesWorkedTogether.put(keyCombine, tmpDays);
-//				    	  days = hashCoupleColleaguesWorkedTogether.get(keyCombine);
-//				      }
-//				      else {
-//				    	// store for first time days of together work for a couple
-//				    	  hashCoupleColleaguesWorkedTogether.put(keyCombine, days);
-//				      }
+				      if (hashCoupleColleaguesWorkedTogether.containsKey(keyCombine)) {		
+				    	  long tmpDays= hashCoupleColleaguesWorkedTogether.get(keyCombine);
+				    	  tmpDays+=days;
+				    	  //stored accumulated time in days of together work for the couple				     
+				    	  hashCoupleColleaguesWorkedTogether.put(keyCombine, tmpDays);
+				    	  days = hashCoupleColleaguesWorkedTogether.get(keyCombine);
+				      }
+				      else {
+				    	// store for first time days of together work for a couple
+				    	  hashCoupleColleaguesWorkedTogether.put(keyCombine, days);
+				      }
 				      
 				      //sets the maximum value
 				      if ("-1".equals(maxKeyCombine)) {

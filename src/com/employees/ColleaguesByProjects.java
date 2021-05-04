@@ -10,7 +10,34 @@ import java.time.LocalDate;
  * Ivo Baklov
  */
 public class ColleaguesByProjects {
+	public ColleaguesByProjects() {
+		super();
+	}
 	private long empID;
+	public ColleaguesByProjects(long empID, long projectID, LocalDate dateFrom, LocalDate dateTo) {
+		super();
+		this.empID = empID;
+		this.projectID = projectID;
+		this.dateFrom = dateFrom;
+		this.dateTo = dateTo;
+	}
+	public ColleaguesByProjects(long empID, long projectID, String dateFrom, String dateTo) {
+		super();
+		this.empID = empID;
+		this.projectID = projectID;
+		if ("NULL".equals(dateFrom)) {
+			this.dateFrom = LocalDate.parse(dateFrom);
+		}
+		else {
+			this.dateFrom = LocalDate.parse(dateFrom);
+		}
+		if ("NULL".equals(dateTo)) {
+			this.dateTo = LocalDate.now();;
+		}
+		else {		
+			this.dateTo = LocalDate.parse(dateTo);;
+		}
+	}
 	private long projectID;
 	private LocalDate dateFrom;
 	private LocalDate dateTo;
